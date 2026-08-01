@@ -1,243 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta name="google-site-verification" content="SvKq7uxaGemiCDxeYKYh96D5Whn0dtpf865-OkEA18A" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OneSeva Portal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AAPKA GOOGLE VERIFICATION CODE HATAEIN NAHI, USE ISKE NICHE RAKHEIN -->
+    <meta name="google-site-verification" content="Aapka_Google_Code_Yahan_Hoga" />
+    <title>OneSeva Portal | All Government Services</title>
+    
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
 
-<link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+        }
 
-</head>>
+        /* Top Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        /* Search Section */
+        .search-container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .search-container input:focus {
+            border-color: #2a5298;
+            box-shadow: 0 4px 15px rgba(42, 82, 152, 0.2);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Service Categories grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        /* Service Cards */
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-top: 5px solid #2a5298;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .card .icon {
+            font-size: 3rem;
+            color: #2a5298;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 20px;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        /* Action Button */
+        .btn {
+            display: inline-block;
+            background: #2a5298;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(42, 82, 152, 0.3);
+        }
+
+        .btn:hover {
+            background: #1e3c72;
+            box-shadow: 0 6px 15px rgba(30, 60, 114, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
 <body>
 
-<header class="topbar">
+    <!-- Header Section -->
+    <header>
+        <h1><i class="fa-solid fa-layer-group"></i> OneSeva Portal</h1>
+        <p>All Government Services At One Place | सभी सरकारी सेवाएं एक ही जगह</p>
+    </header>
 
-<div class="logo">
-<i class="fa-solid fa-building-columns"></i>
-<span>OneSeva</span>
-</div>
+    <!-- Real-time Live Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search service (e.g., Aadhaar, Voter, RTPS)..." onkeyup="filterServices()">
+    </div>
 
-<nav>
+    <!-- Main Content Area -->
+    <div class="container">
+        <div class="grid" id="servicesGrid">
+            
+            <!-- Service 1: Aadhaar Card -->
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-id-card"></i></div>
+                <h3>Aadhaar Card Services</h3>
+                <p>Download Aadhaar, Update Address & Check Status Online.</p>
+                <a href="https://uidai.gov.in" target="_blank" class="btn">Open Service</a>
+            </div>
 
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">RTPS</a>
-<a href="#">Sarkari Result</a>
-<a href="#">Contact</a>
+            <!-- Service 2: Voter ID -->
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-address-card"></i></div>
+                <h3>Voter ID Services</h3>
+                <p>New Registration, Correction & Download Voter Slip.</p>
+                <a href="https://eci.gov.in" target="_blank" class="btn">Open Service</a>
+            </div>
 
-</nav>
+            <!-- Service 3: RTPS Bihar -->
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-file-invoice"></i></div>
+                <h3>Bihar RTPS (Caste/Income)</h3>
+                <p>Apply for Caste, Income, and Residence Certificates.</p>
+                <a href="https://bihar.gov.in" target="_blank" class="btn">Open Service</a>
+            </div>
 
-</header>
+            <!-- Service 4: Ration Card -->
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-wheat-awn"></i></div>
+                <h3>Ration Card Services</h3>
+                <p>Apply New Ration Card, View List & Download Online.</p>
+                <a href="https://bihar.gov.in" target="_blank" class="btn">Open Service</a>
+            </div>
 
-<section class="hero">
+            <!-- Service 5: Sarkari Result / Jobs -->
+            <div class="card" style="border-top-color: #ff9900;">
+                <div class="icon" style="color: #ff9900;"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>Sarkari Result / Jobs</h3>
+                <p>Latest Government Job Vacancies, Admit Cards & Results.</p>
+                <a href="https://sarkariresult.com" target="_blank" class="btn" style="background: #ff9900;">View All Jobs</a>
+            </div>
 
-<div class="hero-content">
+        </div>
+    </div>
 
-<h1>Welcome To OneSeva</h1>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 OneSeva Portal | Designed with ❤️ for Public Welfare</p>
+    </footer>
 
-<p>All Government Services At One Place</p>
-
-<input type="text" placeholder="Search Government Services...">
-
-<a href="#" class="btn">Explore Services</a>
-
-</div>
-
-</section>
-
-<section class="title">
-
-<h2>Popular Services</h2>
-<div class="card"><div class="card">
-    <i class="fas fa-id-card"></i>
-    <h3>Voter ID</h3>
-    <p>New Registration & Correction</p>
-    <a href="https://voters.eci.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-passport"></i>
-    <h3>Passport</h3>
-    <p>Apply & Track Passport</p>
-    <a href="https://www.passportindia.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-car"></i>
-    <h3>Driving Licence</h3>
-    <p>Apply & Renew Licence</p>
-    <a href="https://parivahan.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-home"></i>
-    <h3>Ration Card</h3>
-    <p>Apply & Check Status</p>
-    <a href="https://nfsa.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-tractor"></i>
-    <h3>PM Kisan</h3>
-    <p>Beneficiary Status</p>
-    <a href="https://pmkisan.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-briefcase"></i>
-    <h3>e-Shram Card</h3>
-    <p>Registration & Update</p>
-    <a href="https://eshram.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-university"></i>
-    <h3>DigiLocker</h3>
-    <p>Access Documents</p>
-    <a href="https://www.digilocker.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-money-check-alt"></i>
-    <h3>EPFO</h3>
-    <p>PF Passbook & Claim</p>
-    <a href="https://www.epfindia.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-graduation-cap"></i>
-    <h3>Scholarship</h3>
-    <p>National Scholarship Portal</p>
-    <a href="https://scholarships.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-industry"></i>
-    <h3>Udyam Registration</h3>
-    <p>MSME Registration</p>
-    <a href="https://udyamregistration.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-file-invoice"></i>
-    <h3>GST Registration</h3>
-    <p>GST Services</p>
-    <a href="https://www.gst.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-file-alt"></i>
-    <h3>Birth Certificate</h3>
-    <p>Birth Registration</p>
-    <a href="https://crsorgi.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-heartbeat"></i>
-    <h3>ABHA Health ID</h3>
-    <p>Create Health ID</p>
-    <a href="https://abha.abdm.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-users"></i>
-    <h3>Labour Card</h3>
-    <p>Labour Registration</p>
-    <a href="https://labour.gov.in/" target="_blank">Open</a>
-</div>
-    <i class="fas fa-passport"></i>
-    <h3>Passport</h3>
-    <p>Apply & Track Passport</p>
-    <a href="https://www.passportindia.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-car"></i>
-    <h3>Driving Licence</h3>
-    <p>Apply & Renew DL</p>
-    <a href="https://parivahan.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-home"></i>
-    <h3>Ration Card</h3>
-    <p>Apply & Status</p>
-    <a href="https://nfsa.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-tractor"></i>
-    <h3>PM Kisan</h3>
-    <p>Beneficiary Status</p>
-    <a href="https://pmkisan.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-graduation-cap"></i>
-    <h3>Scholarship</h3>
-    <p>National Scholarship Portal</p>
-    <a href="https://scholarships.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-briefcase"></i>
-    <h3>e-Shram Card</h3>
-    <p>Registration & Update</p>
-    <a href="https://eshram.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-money-check-alt"></i>
-    <h3>EPFO</h3>
-    <p>PF Passbook & Claim</p>
-    <a href="https://www.epfindia.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fas fa-university"></i>
-    <h3>DigiLocker</h3>
-    <p>Digital Documents</p>
-    <a href="https://www.digilocker.gov.in/" target="_blank">Open</a>
-</div>
-<div class="cards">
-  <div class="card">
-    <i class="fa-solid fa-id-card"></i>
-    <h3>PAN Card</h3>
-    <p>Apply & Download PAN Card</p>
-    <a href="https://www.onlineservices.nsdl.com/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fa-solid fa-address-card"></i>
-    <h3>Aadhaar Card</h3>
-    <p>UIDAI Services</p>
-    <a href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fa-solid fa-file-lines"></i>
-    <h3>Bihar RTPS</h3>
-    <p>Caste, Income & Residence</p>
-    <a href="https://serviceonline.bihar.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="card">
-    <i class="fa-solid fa-heart-pulse"></i>
-    <h3>Ayushman Card</h3>
-    <p>PMJAY Services</p>
-    <a href="https://beneficiary.nha.gov.in/" target="_blank">Open</a>
-</div>
-
-</div>
-</section>
-
-<footer>
-<p>© 2026 OneSeva. All Rights Reserved.</p>
-</footer>
-
+    <!-- Live Search JavaScript Code -->
+    <script>
+        function filterServices() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let cards = document.getElementsByClassName('card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                let desc = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+                
+                if (title.includes(input) || desc.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
