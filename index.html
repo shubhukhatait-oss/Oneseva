@@ -2,220 +2,253 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- AAPKA GOOGLE VERIFICATION CODE HATAEIN NAHI, USE ISKE NICHE RAKHEIN -->
+    <meta name="viewport" content="width=1200, initial-scale=1.0"> <!-- Desktop Mode Forced Layout -->
     <meta name="google-site-verification" content="Aapka_Google_Code_Yahan_Hoga" />
-    <title>OneSeva Portal | All Government Services</title>
+    <title>OneSeva Portal | CSC Digital Seva Mode</title>
     
-    <!-- Google Fonts & FontAwesome Icons -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+        
+        /* CSC Style Background Pattern */
+        body { 
+            background-color: #eef2f7; 
+            background-image: radial-gradient(#3b5998 0.5px, transparent 0.5px), radial-gradient(#3b5998 0.5px, #eef2f7 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            color: #333; 
+            min-width: 1200px; /* Forces Desktop View Width */
         }
 
-        body {
-            background-color: #f4f7f6;
-            color: #333;
+        /* Indian Flag Gradient Header */
+        header { 
+            background: linear-gradient(to right, #ff9933, #ffffff, #138808); 
+            padding: 25px; 
+            text-align: center; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            position: relative;
+            border-bottom: 4px solid #000080; /* Ashoka Chakra Blue Border */
         }
-
-        /* Top Header */
-        header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
+        
+        header h1 { 
+            font-size: 3rem; 
+            font-weight: 700; 
+            color: #000080; /* Navy Blue like Ashoka Chakra */
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
             letter-spacing: 1px;
         }
-
-        header p {
-            font-size: 1rem;
-            margin-top: 5px;
-            opacity: 0.9;
-        }
-
-        /* Search Section */
-        .search-container {
-            max-width: 600px;
-            margin: 30px auto;
-            padding: 0 20px;
-            position: relative;
-        }
-
-        .search-container input {
-            width: 100%;
-            padding: 15px 20px;
-            border: 2px solid #ddd;
-            border-radius: 50px;
-            font-size: 1rem;
-            outline: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .search-container input:focus {
-            border-color: #2a5298;
-            box-shadow: 0 4px 15px rgba(42, 82, 152, 0.2);
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Service Categories grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        /* Service Cards */
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            border-top: 5px solid #2a5298;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-
-        .card .icon {
-            font-size: 3rem;
-            color: #2a5298;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+        
+        header p { 
+            font-size: 1.15rem; 
+            margin-top: 5px; 
             color: #222;
+            font-weight: 500;
         }
 
-        .card p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 20px;
-            height: 40px;
-            overflow: hidden;
-        }
-
-        /* Action Button */
-        .btn {
-            display: inline-block;
-            background: #2a5298;
+        /* Top CSC Info Bar */
+        .csc-bar {
+            background-color: #3b5998;
             color: white;
-            padding: 10px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
+            padding: 8px 40px;
             font-size: 0.9rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(42, 82, 152, 0.3);
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
         }
 
-        .btn:hover {
-            background: #1e3c72;
-            box-shadow: 0 6px 15px rgba(30, 60, 114, 0.4);
+        /* Search Section - Fixed Wide Width */
+        .search-container { 
+            max-width: 800px; 
+            margin: 30px auto; 
+            padding: 0 20px; 
+        }
+        .search-container input { 
+            width: 100%; 
+            padding: 15px 25px; 
+            border: 2px solid #3b5998; 
+            border-radius: 4px; 
+            font-size: 1.1rem; 
+            outline: none; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
         }
 
-        /* Footer */
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 5px;
-            font-size: 0.9rem;
+        /* Container Set to Fixed Desktop Width */
+        .container { 
+            width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px; 
         }
+
+        /* Desktop Styled 4-Column Grid */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; 
+            margin-top: 10px; 
+        }
+
+        /* Professional CSC Style Dashboard Cards */
+        .card { 
+            background: white; 
+            border-radius: 4px; 
+            padding: 20px; 
+            text-align: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            transition: all 0.2s ease; 
+            border: 1px solid #ced4da;
+            border-top: 4px solid #3b5998; 
+        }
+        .card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1); 
+            border-color: #3b5998;
+        }
+        .card .icon { 
+            font-size: 2.8rem; 
+            color: #3b5998; 
+            margin-bottom: 12px; 
+        }
+        .card h3 { 
+            font-size: 1.2rem; 
+            margin-bottom: 8px; 
+            color: #000080; 
+            font-weight: 700;
+        }
+        .card p { 
+            font-size: 0.85rem; 
+            color: #555; 
+            margin-bottom: 15px; 
+            height: 36px; 
+            overflow: hidden; 
+        }
+
+        /* Sharp Rectangular Action Button like Govt Portals */
+        .btn { 
+            display: block; 
+            background: #3b5998; 
+            color: white; 
+            padding: 10px 0; 
+            border-radius: 2px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+            transition: all 0.2s ease; 
+            text-transform: uppercase;
+            border: 1px solid transparent;
+        }
+        .btn:hover { 
+            background: #2d4373; 
+            border-color: #000080;
+        }
+
+        footer { 
+            background: #111; 
+            color: #aaa; 
+            text-align: center; 
+            padding: 25px; 
+            margin-top: 50px; 
+            font-size: 0.9rem; 
+            border-top: 4px solid #138808;
+        }
+        footer span { color: #ff9933; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1><i class="fa-solid fa-layer-group"></i> OneSeva Portal</h1>
-        <p>All Government Services At One Place | सभी सरकारी सेवाएं एक ही जगह</p>
-    </header>
-
-    <!-- Real-time Live Search Bar -->
-    <div class="search-container">
-        <input type="text" id="searchBar" placeholder="Search service (e.g., Aadhaar, Voter, RTPS)..." onkeyup="filterServices()">
+    <!-- CSC Info Bar -->
+    <div class="csc-bar">
+        <div><i class="fa-solid fa-circle-check"></i> An Approved Digital Seva Initiative</div>
+        <div>Sarkari Seva Kendra | India <i class="fa-solid fa-flag"></i></div>
     </div>
 
-    <!-- Main Content Area -->
+    <!-- Indian Flag Gradient Header -->
+    <header>
+        <h1><i class="fa-solid fa-landmark"></i> OneSeva Portal</h1>
+        <p>All Government & CSC Services At One Place | डिजिटल सेवा केंद्र</p>
+    </header>
+
+    <!-- Search Section -->
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Type to search service (e.g., PAN, Aadhaar, RTPS, Kisan)..." onkeyup="filterServices()">
+    </div>
+
+    <!-- Desktop Set Width Container -->
     <div class="container">
         <div class="grid" id="servicesGrid">
             
-            <!-- Service 1: Aadhaar Card -->
+            <!-- 1. Aadhaar Card -->
             <div class="card">
                 <div class="icon"><i class="fa-solid fa-id-card"></i></div>
-                <h3>Aadhaar Card Services</h3>
-                <p>Download Aadhaar, Update Address & Check Status Online.</p>
-                <a href="https://uidai.gov.in" target="_blank" class="btn">Open Service</a>
+                <h3>Aadhaar Card</h3>
+                <p>Download, Address Update & Verification Services.</p>
+                <a href="https://uidai.gov.in" target="_blank" class="btn">Click Here</a>
             </div>
 
-            <!-- Service 2: Voter ID -->
+            <!-- 2. Voter ID -->
             <div class="card">
                 <div class="icon"><i class="fa-solid fa-address-card"></i></div>
-                <h3>Voter ID Services</h3>
-                <p>New Registration, Correction & Download Voter Slip.</p>
-                <a href="https://eci.gov.in" target="_blank" class="btn">Open Service</a>
+                <h3>Voter ID Card</h3>
+                <p>New Registration, Correction & Electoral Roll Search.</p>
+                <a href="https://eci.gov.in" target="_blank" class="btn">Click Here</a>
             </div>
 
-            <!-- Service 3: RTPS Bihar -->
+            <!-- 3. PAN Card -->
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-credit-card"></i></div>
+                <h3>PAN Card Seva</h3>
+                <p>Apply New PAN, Reprint Card & Online Correction.</p>
+                <a href="https://nsdl.com" target="_blank" class="btn">Click Here</a>
+            </div>
+
+            <!-- 4. Ayushman Card -->
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <h3>Ayushman Card</h3>
+                <p>Check PM-JAY Eligibility & Download Health Card.</p>
+                <a href="https://nha.gov.in" target="_blank" class="btn">Click Here</a>
+            </div>
+
+            <!-- 5. Bihar RTPS -->
             <div class="card">
                 <div class="icon"><i class="fa-solid fa-file-invoice"></i></div>
-                <h3>Bihar RTPS (Caste/Income)</h3>
-                <p>Apply for Caste, Income, and Residence Certificates.</p>
-                <a href="https://bihar.gov.in" target="_blank" class="btn">Open Service</a>
+                <h3>Bihar RTPS</h3>
+                <p>Online Application for Jati, Aay, and Niwas Certificate.</p>
+                <a href="https://bihar.gov.in" target="_blank" class="btn">Click Here</a>
             </div>
 
-            <!-- Service 4: Ration Card -->
+            <!-- 6. Ration Card -->
             <div class="card">
                 <div class="icon"><i class="fa-solid fa-wheat-awn"></i></div>
-                <h3>Ration Card Services</h3>
-                <p>Apply New Ration Card, View List & Download Online.</p>
-                <a href="https://bihar.gov.in" target="_blank" class="btn">Open Service</a>
+                <h3>Ration Card</h3>
+                <p>Apply Online, View Beneficiary List & Dealer Details.</p>
+                <a href="https://bihar.gov.in" target="_blank" class="btn">Click Here</a>
             </div>
 
-            <!-- Service 5: Sarkari Result / Jobs -->
-            <div class="card" style="border-top-color: #ff9900;">
-                <div class="icon" style="color: #ff9900;"><i class="fa-solid fa-graduation-cap"></i></div>
-                <h3>Sarkari Result / Jobs</h3>
-                <p>Latest Government Job Vacancies, Admit Cards & Results.</p>
-                <a href="https://sarkariresult.com" target="_blank" class="btn" style="background: #ff9900;">View All Jobs</a>
+            <!-- 7. PM Kisan -->
+            <div class="card">
+                <div class="icon"><i class="fa-solid fa-tractor"></i></div>
+                <h3>PM Kisan Yojana</h3>
+                <p>Check Samman Nidhi Status, KYC & Registration.</p>
+                <a href="https://pmkisan.gov.in" target="_blank" class="btn">Click Here</a>
+            </div>
+
+            <!-- 8. Sarkari Result -->
+            <div class="card" style="border-top-color: #ff9933;">
+                <div class="icon" style="color: #ff9933;"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>Sarkari Jobs</h3>
+                <p>Latest Government Job Notifications, Results & Admit Cards.</p>
+                <a href="https://sarkariresult.com" target="_blank" class="btn" style="background: #ff9933;">View All</a>
             </div>
 
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 OneSeva Portal | Designed with ❤️ for Public Welfare</p>
+        <p>&copy; 2026 <span>OneSeva Digital Portal</span> | National e-Governance Infrastructure</p>
     </footer>
 
-    <!-- Live Search JavaScript Code -->
     <script>
         function filterServices() {
             let input = document.getElementById('searchBar').value.toLowerCase();
